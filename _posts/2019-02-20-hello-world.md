@@ -1,4 +1,6 @@
 ---
+title: Hello World
+date: 2019-02-20 00:00:00 Z
 layout: post
 author: sush
 ---
