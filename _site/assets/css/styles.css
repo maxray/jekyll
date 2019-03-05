@@ -10,11 +10,22 @@
 
 body {
   margin: 0;
-  color: #2b2b2b;
+  min-height: 100vh;
+  color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  background: #31b3f9;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #31b3f9 0%, #70e2ff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #31b3f9 0%, #70e2ff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #31b3f9 0%, #70e2ff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31b3f9', endColorstr='#70e2ff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
 
 h1,
 h2,
@@ -25,12 +36,12 @@ h3 {
   line-height: 1.5; }
 
 h1 {
-  color: #19CCAA;
+  color: #ffffff;
   font-size: 2.5em; }
   h1 a,
   h1 a:visited {
     text-decoration: none;
-    color: #19CCAA; }
+    color: #ffffff; }
 
 h2 {
   font-size: 2em; }
@@ -42,24 +53,32 @@ a:visited {
   font-weight: bold; }
 
 a:hover {
-  color: #19CCAA;
+  color: #ffffff;
   text-decoration: underline; }
 
 header {
-  background: #ce600c;
   padding: 2rem;
   text-align: center;
-  height: 50vh;
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  header img {
+    max-width: 200px; }
+  header nav a, header nav a:visited {
+    background-color: #bada55;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 1rem; }
+  header nav a:hover {
+    background-color: #ffffff;
+    color: #bada55;
+    text-decoration: none;
+    margin-left: 1rem; }
 
 main {
   padding: 0 15px;
   margin: 0 auto; }
-
-time {
-  color: #898989; }
 
 .wrapper {
   margin: 2rem; }
@@ -94,9 +113,8 @@ aside {
           margin-bottom: -1px;
           box-shadow: 0; }
           aside nav ul li a:hover, aside nav ul li a:active {
-            background: #ce600c;
             text-decoration: none;
-            color: #19CCAA; }
+            color: #ffffff; }
     aside nav:after {
       content: '';
       display: table;
@@ -105,3 +123,24 @@ aside {
 footer {
   text-align: center;
   padding: 40px; }
+
+/* Hero - feel free to delete this, it is just to be pretty. :) */
+.main-title {
+  text-align: center;
+  font-size: 5rem; }
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 75vw;
+  margin: auto;
+  font-size: 6rem; }
+  .hero span {
+    padding: 2rem; }
+  .hero .jekyll {
+    width: 20vw; }
+  .hero .octocat {
+    width: 15vw; }
+  .hero .siteleaf {
+    width: 10vw; }

@@ -1,10 +1,16 @@
 body {
 	margin: 0;
+	min-height:100vh;
 	color: $font-color;
 	font-family: $font-style;
 	font-size: 16px;
 	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
+	background: #31b3f9; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #31b3f9 0%, #70e2ff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #31b3f9 0%,#70e2ff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #31b3f9 0%,#70e2ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31b3f9', endColorstr='#70e2ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 h1,
 h2,
@@ -37,20 +43,40 @@ a:hover {
 	text-decoration: underline;
 }
 header {
-	background: $header;
 	padding: 2rem;
 	text-align: center;
-	height: 50vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	img {
+		max-width:200px;
+	}
+
+	nav {
+
+		
+		a , a:visited {
+			background-color:  $link-color;	
+			color:$main;
+			text-decoration:none;
+			padding:10px 20px;
+			margin-left:1rem;
+		}
+
+		a:hover  {
+			background-color:  $main;
+			color: $link-color;	
+			text-decoration:none;
+			margin-left:1rem;
+		}
+		
+		
+	}
 }
 main {
 	padding: 0 15px;
 	margin: 0 auto;
-}
-time {
-	color: #898989;
 }
 .wrapper {
 	
@@ -89,7 +115,7 @@ aside {
 					box-shadow: 0;
 					&:hover,
 					&:active {
-						background: $header;
+			
 						text-decoration: none;
 						color: $main;
 					}
@@ -106,4 +132,37 @@ aside {
 footer {
 	text-align: center;
 	padding: 40px;
+}
+
+/* Hero - feel free to delete this, it is just to be pretty. :) */
+
+.main-title {
+	text-align:center;
+	font-size:5rem;
+}
+
+.hero {
+
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 75vw;
+    margin: auto;
+	font-size: 6rem;
+	
+	span {
+		padding:2rem;
+	}
+
+	.jekyll {
+		width: 20vw;
+	}
+
+	.octocat {
+		width: 15vw;
+	}
+	.siteleaf {
+		width: 10vw;
+	}
+
 }
