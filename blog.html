@@ -1,7 +1,8 @@
 ---
-layout: default
 title: Blog
+layout: default
 ---
+
 <h1>Latest Posts</h1>
 
 <ul>
